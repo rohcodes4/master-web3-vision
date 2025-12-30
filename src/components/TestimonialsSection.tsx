@@ -43,11 +43,11 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section id="testimonials" ref={sectionRef} className="py-24 md:py-32 bg-surface/50">
+    <section id="testimonials" ref={sectionRef} className="py-32 md:py-40 bg-surface/30">
       <div className="container mx-auto px-6 md:px-10 lg:px-16">
         {/* Header */}
-        <div className="text-center mb-16 reveal">
-          <span className="section-tag mb-6 inline-block">
+        <div className="text-center mb-20 reveal">
+          <span className="section-tag mb-8 inline-block">
             <span className="w-1.5 h-1.5 rounded-full bg-primary" />
             TESTIMONIALS
           </span>
@@ -57,11 +57,11 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.name}
-              className="glass-card p-8 reveal"
+              className="glass-card p-8 rounded-2xl reveal"
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               {/* Quote Mark */}

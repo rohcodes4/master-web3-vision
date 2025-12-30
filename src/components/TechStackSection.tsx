@@ -39,11 +39,11 @@ const TechStackSection = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-24 md:py-32">
+    <section ref={sectionRef} className="py-32 md:py-40">
       <div className="container mx-auto px-6 md:px-10 lg:px-16">
         {/* Header */}
         <div className="text-center mb-16 reveal">
-          <span className="section-tag mb-6 inline-block">
+          <span className="section-tag mb-8 inline-block">
             <span className="w-1.5 h-1.5 rounded-full bg-primary" />
             TECH STACK
           </span>
@@ -53,7 +53,7 @@ const TechStackSection = () => {
         </div>
 
         {/* Tech Badges */}
-        <div className="flex flex-wrap justify-center gap-4 reveal">
+        <div className="flex flex-wrap justify-center gap-4 reveal max-w-4xl mx-auto">
           {technologies.map((tech, index) => (
             <span
               key={tech}
