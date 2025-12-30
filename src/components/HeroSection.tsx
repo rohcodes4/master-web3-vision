@@ -9,18 +9,18 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 md:px-10 lg:px-16 pt-24">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 md:px-10 lg:px-16 pt-32 pb-16">
       <div className="text-center max-w-5xl mx-auto">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-5 py-2.5 glass-card rounded-full mb-8 animate-in">
-          <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-          <span className="text-xs uppercase tracking-[0.15em] text-foreground/70">
+        <div className="inline-flex items-center gap-3 px-6 py-3 glass-card rounded-full mb-12 animate-in">
+          <span className="w-2.5 h-2.5 rounded-full bg-primary animate-pulse" />
+          <span className="text-sm uppercase tracking-[0.12em] text-foreground/70">
             Accepting New Projects
           </span>
         </div>
 
         {/* Headline */}
-        <h1 className="font-syne font-extrabold leading-[0.95] mb-8">
+        <h1 className="font-syne font-extrabold leading-[0.92] mb-12">
           <span className="block text-[clamp(2.5rem,10vw,7rem)] animate-in">
             WE BUILD THE
           </span>
@@ -35,14 +35,8 @@ const HeroSection = () => {
           </span>
         </h1>
 
-        {/* Subtitle */}
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed animate-in animate-delay-300">
-          Elite blockchain development for protocols that demand excellence. 
-          From smart contracts to full-stack dApps, we ship products that scale.
-        </p>
-
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-in animate-delay-400">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20 animate-in animate-delay-300">
           <a href="#contact" className="btn-primary w-full sm:w-auto">
             START YOUR PROJECT
           </a>

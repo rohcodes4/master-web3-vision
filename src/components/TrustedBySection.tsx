@@ -9,12 +9,12 @@ const TrustedBySection = () => {
   ];
 
   return (
-    <section className="py-16 border-y border-glass-border">
+    <section className="py-20 border-y border-glass-border">
       <div className="container mx-auto px-6 md:px-10 lg:px-16">
-        <p className="text-center text-xs tracking-[0.2em] text-muted-foreground mb-10">
+        <p className="text-center text-xs tracking-[0.15em] text-muted-foreground mb-12">
           TRUSTED BY LEADING WEB3 COMPANIES
         </p>
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+        <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16">
           {brands.map((brand) => (
             <div
               key={brand}

@@ -53,7 +53,7 @@ export default {
       },
       fontFamily: {
         syne: ['Syne', 'sans-serif'],
-        mono: ['Space Mono', 'monospace'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

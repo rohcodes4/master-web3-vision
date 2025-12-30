@@ -25,66 +25,74 @@ const ProcessSection = () => {
     {
       number: '01',
       title: 'Discovery',
-      description: 'Deep dive into your vision, requirements, and market positioning. We align on goals, timelines, and success metrics.',
+      description: 'Deep dive into your vision and market positioning. We align on goals and success metrics.',
     },
     {
       number: '02',
       title: 'Architecture',
-      description: 'Technical design and system architecture. Smart contract specifications, security considerations, and scalability planning.',
+      description: 'Technical design and system architecture. Security considerations and scalability planning.',
     },
     {
       number: '03',
       title: 'Development',
-      description: 'Agile sprints with weekly demos. Continuous integration, rigorous testing, and iterative refinement.',
+      description: 'Agile sprints with weekly demos. Continuous integration and iterative refinement.',
     },
     {
       number: '04',
       title: 'Launch',
-      description: 'Security audits, testnet deployment, and mainnet launch. Post-launch monitoring and ongoing support.',
+      description: 'Security audits, testnet deployment, and mainnet launch with ongoing support.',
     },
   ];
 
   return (
-    <section id="process" ref={sectionRef} className="py-24 md:py-32">
+    <section id="process" ref={sectionRef} className="py-32 md:py-40">
       <div className="container mx-auto px-6 md:px-10 lg:px-16">
         {/* Header */}
-        <div className="text-center mb-16 reveal">
-          <span className="section-tag mb-6 inline-block">
+        <div className="text-center mb-20 reveal">
+          <span className="section-tag mb-8 inline-block">
             <span className="w-1.5 h-1.5 rounded-full bg-primary" />
             HOW WE WORK
           </span>
           <h2 className="font-syne text-[clamp(2rem,5vw,3.5rem)] font-bold mb-6">
             From Vision to<br />Deployment
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            A proven methodology refined over hundreds of successful Web3 projects.
+          <p className="text-muted-foreground max-w-xl mx-auto">
+            A proven methodology refined over hundreds of successful projects.
           </p>
         </div>
 
         {/* Process Steps */}
         <div className="relative">
-          {/* Connecting Line (Desktop) */}
-          <div className="hidden lg:block absolute top-[60px] left-[10%] right-[10%] h-px bg-gradient-to-r from-primary via-secondary to-accent" />
+          {/* Connecting Line (Desktop) - Behind the circles */}
+          <div className="hidden lg:block absolute top-[50px] left-[12%] right-[12%] h-0.5">
+            <div className="absolute inset-0 bg-surface" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-accent opacity-50" />
+          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
             {steps.map((step, index) => (
               <div
                 key={step.number}
                 className="text-center reveal"
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
-                {/* Number Circle */}
-                <div className="relative inline-flex items-center justify-center w-[80px] h-[80px] md:w-[100px] md:h-[100px] mb-8">
-                  <div className="absolute inset-0 border-2 border-glass-border rounded-full" />
-                  <div className="absolute inset-0 border-2 border-primary/50 rounded-full animate-pulse-glow" />
-                  <span className="font-syne text-3xl md:text-4xl font-bold text-primary">
+                {/* Number Circle with solid background */}
+                <div className="relative inline-flex items-center justify-center w-[100px] h-[100px] mb-10">
+                  {/* Solid background circle */}
+                  <div className="absolute inset-0 bg-background rounded-full" />
+                  {/* Border */}
+                  <div className="absolute inset-0 border-2 border-primary/30 rounded-full" />
+                  {/* Glow effect */}
+                  <div className="absolute inset-2 border border-primary/20 rounded-full animate-pulse-glow" />
+                  {/* Number */}
+                  <span className="relative font-syne text-3xl md:text-4xl font-bold text-primary">
                     {step.number}
                   </span>
                 </div>
 
                 {/* Content */}
                 <h3 className="font-syne text-xl font-bold mb-4">{step.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed max-w-xs mx-auto">
+                <p className="text-sm text-muted-foreground leading-relaxed max-w-[240px] mx-auto">
                   {step.description}
                 </p>
               </div>

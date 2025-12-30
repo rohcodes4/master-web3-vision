@@ -30,10 +30,10 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="border-t border-glass-border py-16">
+    <footer className="border-t border-glass-border py-20">
       <div className="container mx-auto px-6 md:px-10 lg:px-16">
         {/* Main Footer */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <a href="#" className="flex items-center gap-3 mb-6">
@@ -118,7 +118,7 @@ const Footer = () => {
               <a
                 key={social.label}
                 href={social.href}
-                className="w-10 h-10 border border-glass-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+                className="w-10 h-10 border border-glass-border rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
                 aria-label={social.label}
               >
                 <social.icon size={18} />
