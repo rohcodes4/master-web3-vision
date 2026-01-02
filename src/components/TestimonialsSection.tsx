@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { AnimatedWaveBackground } from './ui/animated-wave-background';
 
 const TestimonialsSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -43,8 +44,12 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section id="testimonials" ref={sectionRef} className="py-32 md:py-40 bg-surface/30">
-      <div className="container mx-auto px-6 md:px-10 lg:px-16">
+    <section id="testimonials" ref={sectionRef} className="relative py-32 md:py-40 overflow-hidden">
+      {/* Animated Wave Background */}
+      <AnimatedWaveBackground />
+      
+      {/* Content overlay */}
+      <div className="relative z-10 container mx-auto px-6 md:px-10 lg:px-16">
         {/* Header */}
         <div className="text-center mb-20 reveal">
           <span className="section-tag mb-8 inline-block">
@@ -61,21 +66,24 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.name}
-              className="glass-card p-8 rounded-2xl reveal"
-              style={{ transitionDelay: `${index * 100}ms` }}
+              className="group relative overflow-hidden rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] p-8 transition-all duration-500 hover:bg-white/[0.06] hover:border-primary/30 hover:-translate-y-2 animate-float reveal"
+              style={{ transitionDelay: `${index * 100}ms`, animationDelay: `${index * 200}ms` }}
             >
+              {/* Gradient glow on hover */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10 pointer-events-none" />
+
               {/* Quote Mark */}
-              <div className="text-6xl font-syne text-primary/30 leading-none mb-4">
+              <div className="relative text-6xl font-syne text-primary/30 leading-none mb-4">
                 "
               </div>
 
               {/* Quote */}
-              <p className="text-foreground/90 leading-relaxed mb-8">
+              <p className="relative text-foreground/90 leading-relaxed mb-8">
                 {testimonial.quote}
               </p>
 
               {/* Author */}
-              <div className="flex items-center gap-4">
+              <div className="relative flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
                   <span className="font-syne font-bold text-sm text-primary-foreground">
                     {testimonial.initials}
@@ -90,6 +98,9 @@ const TestimonialsSection = () => {
                   </div>
                 </div>
               </div>
+
+              {/* Bottom gradient line */}
+              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
           ))}
         </div>
