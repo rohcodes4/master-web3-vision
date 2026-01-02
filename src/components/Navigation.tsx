@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, MessageCircle } from 'lucide-react';
+import { LiquidGlassLink } from '@/components/ui/liquid-glass-button';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -63,12 +64,10 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <a
-              href="#contact"
-              className="btn-secondary inline-block"
-            >
+            <LiquidGlassLink href="#contact" size="default" variant="primary">
               LET'S TALK
-            </a>
+              <MessageCircle className="w-4 h-4" />
+            </LiquidGlassLink>
           </div>
 
           {/* Mobile Menu Button */}
@@ -100,13 +99,16 @@ const Navigation = () => {
               {link.label}
             </a>
           ))}
-          <a
+          <LiquidGlassLink
             href="#contact"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="btn-primary mt-4"
+            size="lg"
+            variant="primary"
+            className="mt-4"
           >
             LET'S TALK
-          </a>
+            <MessageCircle className="w-4 h-4" />
+          </LiquidGlassLink>
         </div>
       </div>
     </>

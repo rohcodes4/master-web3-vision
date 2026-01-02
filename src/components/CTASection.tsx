@@ -1,4 +1,6 @@
 import { useEffect, useRef } from 'react';
+import { ArrowRight, Mail } from 'lucide-react';
+import { LiquidGlassLink } from '@/components/ui/liquid-glass-button';
 
 const CTASection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -37,16 +39,15 @@ const CTASection = () => {
           </h2>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 reveal" style={{ transitionDelay: '100ms' }}>
-            <a href="mailto:hello@master.dev" className="btn-primary w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 reveal" style={{ transitionDelay: '100ms' }}>
+            <LiquidGlassLink href="mailto:hello@master.dev" size="lg" variant="primary">
               SCHEDULE A CALL
-            </a>
-            <a
-              href="mailto:hello@master.dev"
-              className="btn-secondary w-full sm:w-auto"
-            >
+              <ArrowRight className="w-4 h-4" />
+            </LiquidGlassLink>
+            <LiquidGlassLink href="mailto:hello@master.dev" size="lg" variant="default">
               hello@master.dev
-            </a>
+              <Mail className="w-4 h-4" />
+            </LiquidGlassLink>
           </div>
         </div>
       </div>
