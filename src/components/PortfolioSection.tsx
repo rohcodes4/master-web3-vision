@@ -111,7 +111,7 @@ const PortfolioSection = () => {
                 />
 
                 {/* Hover Overlay */}
-                <div className="portfolio-overlay md:opacity-0 md:translate-y-4">
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent flex flex-col justify-end p-6 opacity-0 translate-y-4 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
                   <span className="text-xs tracking-[0.12em] text-primary mb-2">
                     {project.category}
                   </span>
