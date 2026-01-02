@@ -1,4 +1,5 @@
-import { ChevronDown } from 'lucide-react';
+import { ArrowRight, Briefcase } from 'lucide-react';
+import { LiquidGlassLink } from '@/components/ui/liquid-glass-button';
 
 const HeroSection = () => {
   const stats = [
@@ -36,13 +37,15 @@ const HeroSection = () => {
         </h1>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20 animate-in animate-delay-300">
-          <a href="#contact" className="btn-primary w-full sm:w-auto">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20 animate-in animate-delay-300">
+          <LiquidGlassLink href="#contact" size="lg" variant="primary">
             START YOUR PROJECT
-          </a>
-          <a href="#portfolio" className="btn-secondary w-full sm:w-auto">
+            <ArrowRight className="w-4 h-4" />
+          </LiquidGlassLink>
+          <LiquidGlassLink href="#portfolio" size="lg" variant="secondary">
             VIEW OUR WORK
-          </a>
+            <Briefcase className="w-4 h-4" />
+          </LiquidGlassLink>
         </div>
 
         {/* Stats */}

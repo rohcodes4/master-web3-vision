@@ -3,6 +3,7 @@ import CustomCursor from '@/components/CustomCursor';
 import BackgroundEffects from '@/components/BackgroundEffects';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
+import Spline3DSection from '@/components/Spline3DSection';
 import TrustedBySection from '@/components/TrustedBySection';
 import ServicesSection from '@/components/ServicesSection';
 import PortfolioSection from '@/components/PortfolioSection';
@@ -24,7 +25,9 @@ const Index = () => {
         <main className="relative z-10">
           <Navigation />
           <HeroSection />
+          <Spline3DSection position="above" />
           <TrustedBySection />
+          <Spline3DSection position="below" />
           <ServicesSection />
           <PortfolioSection />
           <ProcessSection />
