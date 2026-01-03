@@ -1,150 +1,85 @@
-import React, { useEffect, useRef } from "react";
-import { PinContainer } from "@/components/ui/3d-pin";
-import { Sparkles, Palette, Video, Wand2, Layers, Camera } from "lucide-react";
+import React from 'react';
+import { motion } from 'framer-motion';
+import CosmicCard from '@/components/ui/cosmic-card';
 
-const artProjects = [
+import art1 from '@/assets/art-1.jpg';
+import art2 from '@/assets/art-2.jpg';
+import art3 from '@/assets/art-3.jpg';
+import art4 from '@/assets/art-4.jpg';
+import art5 from '@/assets/art-5.jpg';
+import art6 from '@/assets/art-6.jpg';
+
+const projects = [
   {
-    title: "Motion Graphics",
-    description: "Stunning animated visuals for brands",
-    icon: Video,
-    color: "from-purple-500 to-pink-500",
-    stats: { projects: "50+", satisfaction: "99%" },
+    image: art1,
+    theme: { primaryColor: '#F59E0B', secondaryColor: '#EF4444', glowColor: 'rgba(245, 158, 11, 0.5)' },
   },
   {
-    title: "3D Animation",
-    description: "Immersive 3D experiences & renders",
-    icon: Layers,
-    color: "from-cyan-500 to-blue-500",
-    stats: { projects: "30+", satisfaction: "100%" },
+    image: art2,
+    theme: { primaryColor: '#8B5CF6', secondaryColor: '#06B6D4', glowColor: 'rgba(139, 92, 246, 0.5)' },
   },
   {
-    title: "Visual Effects",
-    description: "Cinematic VFX for video production",
-    icon: Sparkles,
-    color: "from-amber-500 to-orange-500",
-    stats: { projects: "40+", satisfaction: "98%" },
+    image: art3,
+    theme: { primaryColor: '#06B6D4', secondaryColor: '#8B5CF6', glowColor: 'rgba(6, 182, 212, 0.5)' },
   },
   {
-    title: "Digital Art",
-    description: "Custom illustrations & digital paintings",
-    icon: Palette,
-    color: "from-emerald-500 to-teal-500",
-    stats: { projects: "100+", satisfaction: "99%" },
+    image: art4,
+    theme: { primaryColor: '#EC4899', secondaryColor: '#F59E0B', glowColor: 'rgba(236, 72, 153, 0.5)' },
   },
   {
-    title: "Product Visualization",
-    description: "Photorealistic product renders",
-    icon: Camera,
-    color: "from-rose-500 to-red-500",
-    stats: { projects: "60+", satisfaction: "100%" },
+    image: art5,
+    theme: { primaryColor: '#A855F7', secondaryColor: '#EC4899', glowColor: 'rgba(168, 85, 247, 0.5)' },
   },
   {
-    title: "Interactive Experiences",
-    description: "Engaging animated web experiences",
-    icon: Wand2,
-    color: "from-indigo-500 to-violet-500",
-    stats: { projects: "25+", satisfaction: "99%" },
+    image: art6,
+    theme: { primaryColor: '#EF4444', secondaryColor: '#F59E0B', glowColor: 'rgba(239, 68, 68, 0.5)' },
   },
 ];
 
-export function ArtAnimationSection() {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const elements = sectionRef.current?.querySelectorAll('.reveal');
-    elements?.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
+export default function ArtAnimationSection() {
   return (
-    <section ref={sectionRef} className="relative py-32 md:py-40 bg-black overflow-hidden">
-      <div className="container mx-auto px-6 md:px-10 lg:px-16">
+    <section className="relative py-24 md:py-32 bg-black overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-900/10 via-transparent to-cyan-900/10" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-pink-500/5 rounded-full blur-3xl" />
+
+      <div className="container mx-auto px-6 md:px-10 lg:px-16 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-20 reveal">
-          <span className="section-tag mb-8 inline-block">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-            CREATIVE SERVICES
-          </span>
-          <h2 className="font-syne text-[clamp(2rem,5vw,3.5rem)] font-bold text-white mb-6">
-            Art & Animation
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="font-syne text-[clamp(2rem,5vw,3.5rem)] font-bold text-white mb-4">
+            Art &{' '}
+            <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent">
+              Animation
+            </span>
           </h2>
           <p className="text-lg text-white/60 max-w-2xl mx-auto">
-            Bringing creativity to life through stunning visuals, motion graphics, and immersive animations
+            Explore our stunning visual creations and motion masterpieces
           </p>
-        </div>
+        </motion.div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-20 place-items-center reveal">
-          {artProjects.map((project, index) => (
-            <div key={index} className="h-[25rem] w-full flex items-center justify-center">
-              <PinContainer title={project.title} href="#">
-                <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 w-[20rem] h-[20rem]">
-                  {/* Icon */}
-                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.color} flex items-center justify-center mb-4`}>
-                    <project.icon className="w-6 h-6 text-white" />
-                  </div>
-                  
-                  {/* Gradient background */}
-                  <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${project.color} opacity-5`} />
-                  
-                  {/* Title */}
-                  <h3 className="max-w-xs font-syne font-bold text-xl text-slate-100 mb-2">
-                    {project.title}
-                  </h3>
-                  
-                  {/* Description */}
-                  <p className="text-sm text-slate-400 mb-6">
-                    {project.description}
-                  </p>
-
-                  {/* Stats */}
-                  <div className="flex gap-6 mt-auto">
-                    <div className="flex flex-col">
-                      <span className={`text-2xl font-bold bg-gradient-to-r ${project.color} bg-clip-text text-transparent`}>
-                        {project.stats.projects}
-                      </span>
-                      <span className="text-xs text-slate-500">Projects</span>
-                    </div>
-                    <div className="flex flex-col">
-                      <span className={`text-2xl font-bold bg-gradient-to-r ${project.color} bg-clip-text text-transparent`}>
-                        {project.stats.satisfaction}
-                      </span>
-                      <span className="text-xs text-slate-500">Satisfaction</span>
-                    </div>
-                  </div>
-
-                  {/* Link */}
-                  <div className="flex items-center gap-2 mt-4 text-sm text-slate-400 hover:text-white transition-colors cursor-pointer">
-                    <div className="flex gap-1">
-                      {[1, 2, 3].map((i) => (
-                        <div key={i} className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${project.color}`} />
-                      ))}
-                    </div>
-                    View Work →
-                  </div>
-                </div>
-              </PinContainer>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+          {projects.map((project, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+            >
+              <CosmicCard image={project.image} theme={project.theme} height="320px" />
+            </motion.div>
           ))}
         </div>
       </div>
-
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent pointer-events-none" />
     </section>
   );
 }
-
-export default ArtAnimationSection;
