@@ -4,7 +4,6 @@ import BackgroundEffects from '@/components/BackgroundEffects';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import Spline3DSection from '@/components/Spline3DSection';
-import TrustedBySection from '@/components/TrustedBySection';
 import ServicesSection from '@/components/ServicesSection';
 import PortfolioSection from '@/components/PortfolioSection';
 import ArtAnimationSection from '@/components/ArtAnimationSection';
@@ -27,7 +26,6 @@ const Index = () => {
           <Navigation />
           <HeroSection />
           <Spline3DSection position="above" />
-          <TrustedBySection />
           <Spline3DSection position="below" />
           <ServicesSection />
           <PortfolioSection />
