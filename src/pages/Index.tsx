@@ -7,6 +7,7 @@ import Spline3DSection from '@/components/Spline3DSection';
 import TrustedBySection from '@/components/TrustedBySection';
 import ServicesSection from '@/components/ServicesSection';
 import PortfolioSection from '@/components/PortfolioSection';
+import ArtAnimationSection from '@/components/ArtAnimationSection';
 import ProcessSection from '@/components/ProcessSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import TechStackSection from '@/components/TechStackSection';
@@ -30,6 +31,7 @@ const Index = () => {
           <Spline3DSection position="below" />
           <ServicesSection />
           <PortfolioSection />
+          <ArtAnimationSection />
           <ProcessSection />
           <TestimonialsSection />
           <TechStackSection />
