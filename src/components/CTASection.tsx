@@ -24,7 +24,7 @@ const CTASection = () => {
   }, []);
 
   return (
-    <section id="contact" ref={sectionRef} className="py-16 md:py-24 relative overflow-hidden">
+    <section id="contact" ref={sectionRef} className="py-8 md:py-12 relative overflow-hidden">
       {/* Pulsing Glow Background */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="w-[600px] h-[600px] rounded-full bg-primary/10 blur-[100px] animate-pulse-glow" />

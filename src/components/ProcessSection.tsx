@@ -45,7 +45,7 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section id="process" ref={sectionRef} className="py-16 md:py-24">
+    <section id="process" ref={sectionRef} className="py-8 md:py-12">
       <div className="container mx-auto px-6 md:px-10 lg:px-16">
         {/* Header */}
         <div className="text-center mb-20 reveal">
