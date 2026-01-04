@@ -36,11 +36,6 @@ const ServicesSection = () => {
       features: ['AMM & DEX Development', 'Lending Protocols', 'Yield Aggregators', 'Tokenomics Design'],
     },
     {
-      icon: Image,
-      title: 'NFT & Marketplace',
-      features: ['ERC-721/1155 Contracts', 'Generative Art Engines', 'Marketplace Development', 'Royalty Systems'],
-    },
-    {
       icon: Layout,
       title: 'dApp Development',
       features: ['React & Next.js Frontends', 'Wallet Integrations', 'Subgraph Development', 'Cross-chain Solutions'],
@@ -55,10 +50,15 @@ const ServicesSection = () => {
       title: 'Blockchain Consulting',
       features: ['Architecture Design', 'Chain Selection', 'Token Strategy', 'Go-to-Market Planning'],
     },
+    {
+      icon: Image,
+      title: 'NFT & Marketplace',
+      features: ['ERC-721/1155 Contracts', 'Generative Art Engines', 'Marketplace Development', 'Royalty Systems'],
+    },
   ];
 
   return (
-    <section id="services" ref={sectionRef} className="relative py-16 md:py-24 overflow-hidden">
+    <section id="services" ref={sectionRef} className="relative py-8 md:py-16 overflow-hidden">
       {/* Animated Wave Background - hidden on mobile */}
       <div className="hidden md:block">
         <AnimatedWaveBackground />
