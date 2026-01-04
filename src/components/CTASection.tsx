@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { ArrowRight, Mail } from 'lucide-react';
+import { Mail, Send } from 'lucide-react';
 import { LiquidGlassLink } from '@/components/ui/liquid-glass-button';
 
 const CTASection = () => {
@@ -24,7 +24,7 @@ const CTASection = () => {
   }, []);
 
   return (
-    <section id="contact" ref={sectionRef} className="py-32 md:py-40 relative overflow-hidden">
+    <section id="contact" ref={sectionRef} className="py-16 md:py-24 relative overflow-hidden">
       {/* Pulsing Glow Background */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="w-[600px] h-[600px] rounded-full bg-primary/10 blur-[100px] animate-pulse-glow" />
@@ -40,12 +40,12 @@ const CTASection = () => {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 reveal" style={{ transitionDelay: '100ms' }}>
-            <LiquidGlassLink href="mailto:hello@master.dev" size="lg" variant="primary">
-              SCHEDULE A CALL
-              <ArrowRight className="w-4 h-4" />
+            <LiquidGlassLink href="https://t.me/Cwpto" size="lg" variant="primary" target="_blank" rel="noopener noreferrer">
+              TELEGRAM
+              <Send className="w-4 h-4" />
             </LiquidGlassLink>
-            <LiquidGlassLink href="mailto:hello@master.dev" size="lg" variant="default">
-              hello@master.dev
+            <LiquidGlassLink href="mailto:mastercwpto@gmail.com" size="lg" variant="default">
+              mastercwpto@gmail.com
               <Mail className="w-4 h-4" />
             </LiquidGlassLink>
           </div>

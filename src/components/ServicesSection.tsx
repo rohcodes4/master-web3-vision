@@ -58,14 +58,19 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" ref={sectionRef} className="relative py-32 md:py-40 overflow-hidden">
-      {/* Animated Wave Background */}
-      <AnimatedWaveBackground />
+    <section id="services" ref={sectionRef} className="relative py-16 md:py-24 overflow-hidden">
+      {/* Animated Wave Background - hidden on mobile */}
+      <div className="hidden md:block">
+        <AnimatedWaveBackground />
+      </div>
+      
+      {/* Simple dark background for mobile */}
+      <div className="absolute inset-0 bg-background md:hidden" />
       
       {/* Content overlay */}
       <div className="relative z-10 container mx-auto px-6 md:px-10 lg:px-16">
         {/* Header */}
-        <div className="text-center mb-20 reveal">
+        <div className="text-center mb-12 md:mb-20 reveal">
           <span className="section-tag mb-8 inline-block">
             <span className="w-1.5 h-1.5 rounded-full bg-primary" />
             WHAT WE DO
@@ -83,7 +88,6 @@ const ServicesSection = () => {
                 icon={service.icon}
                 title={service.title}
                 features={service.features}
-                delay={index * 200}
               />
             </div>
           ))}

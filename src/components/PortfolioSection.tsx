@@ -73,7 +73,7 @@ const PortfolioSection = () => {
   ];
 
   return (
-    <section id="portfolio" ref={sectionRef} className="py-32 md:py-40">
+    <section id="portfolio" ref={sectionRef} className="py-16 md:py-24">
       <div className="container mx-auto px-6 md:px-10 lg:px-16">
         {/* Header */}
         <div className="text-center mb-12 reveal">

@@ -18,8 +18,7 @@ export function Web3ServiceCard({
 }: Web3ServiceCardProps) {
   return (
     <div 
-      className="group relative overflow-hidden rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] p-6 transition-all duration-500 hover:bg-white/[0.06] hover:border-primary/30 hover:-translate-y-2 animate-float"
-      style={{ animationDelay: `${delay}ms` }}
+      className="group relative overflow-hidden rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] p-6 transition-all duration-500 hover:bg-white/[0.06] hover:border-primary/30 hover:-translate-y-2"
     >
       {/* Gradient glow on hover */}
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10 pointer-events-none" />

@@ -11,7 +11,7 @@ const Spline3DSection = ({ position }: Spline3DSectionProps) => {
   }
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-8 md:py-16">
       <div className="container mx-auto px-6 md:px-10 lg:px-16">
         <Interactive3DCard
           subtitle="Next-Gen Development"
