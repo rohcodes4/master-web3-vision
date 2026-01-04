@@ -42,7 +42,7 @@ const TechStackSection = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="relative py-32 md:py-40 bg-black overflow-hidden">
+    <section ref={sectionRef} className="relative py-16 md:py-24 bg-black overflow-hidden">
       {/* Background gradient effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-cyan-900/10 via-transparent to-transparent pointer-events-none" />
       

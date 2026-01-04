@@ -38,7 +38,7 @@ const projects = [
 
 export default function ArtAnimationSection() {
   return (
-    <section className="relative py-24 md:py-32 bg-black overflow-hidden">
+    <section className="relative py-16 md:py-24 bg-black overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-purple-900/10 via-transparent to-cyan-900/10" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
