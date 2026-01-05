@@ -1,5 +1,5 @@
 import { ArrowRight, Briefcase } from 'lucide-react';
-import { HoverLink } from '@/components/ui/hover-button';
+import { ShinyLink } from '@/components/ui/shiny-button';
 
 const HeroSection = () => {
   const stats = [
@@ -38,14 +38,14 @@ const HeroSection = () => {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20 animate-in animate-delay-300">
-          <HoverLink href="#contact" variant="primary">
+          <ShinyLink href="#contact" variant="primary">
             START YOUR PROJECT
             <ArrowRight className="w-4 h-4" />
-          </HoverLink>
-          <HoverLink href="#portfolio" variant="secondary">
+          </ShinyLink>
+          <ShinyLink href="#portfolio" variant="secondary">
             VIEW OUR WORK
             <Briefcase className="w-4 h-4" />
-          </HoverLink>
+          </ShinyLink>
         </div>
 
         {/* Stats */}
