@@ -3,7 +3,6 @@ import { SplineScene } from "@/components/ui/spline-scene";
 import { Spotlight } from "@/components/ui/spotlight";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
-
 interface Interactive3DCardProps {
   title: string;
   subtitle?: string;
@@ -15,7 +14,6 @@ interface Interactive3DCardProps {
   className?: string;
   spotlightColor?: string;
 }
-
 export function Interactive3DCard({
   title,
   subtitle,
@@ -30,13 +28,13 @@ export function Interactive3DCard({
   return (
     <div className={cn("w-full", className)}>
       <Spotlight fill={spotlightColor} size={400} />
-      
+
       <div className={cn(
-        "glass-card rounded-3xl min-h-[700px] md:min-h-[500px] flex flex-col md:flex-row overflow-hidden",
+        "glass-card rounded-3xl min-h-[400px] md:min-h-[500px] flex flex-col md:flex-row overflow-hidden",
         reversed && "md:flex-row-reverse"
       )}>
         {/* Content side */}
-        <div className="flex-shrink-0 p-5 md:p-12 flex flex-col justify-center">
+        <div className="flex-1 p-8 md:p-12 flex flex-col justify-center">
           {subtitle && (
             <span className="text-primary text-xs uppercase tracking-[0.15em] mb-4">
               {subtitle}
@@ -49,7 +47,7 @@ export function Interactive3DCard({
             {description}
           </p>
           {ctaText && ctaHref && (
-            
+
               href={ctaHref}
               className="inline-flex items-center gap-2 text-primary hover:text-secondary transition-colors group"
             >
@@ -59,8 +57,8 @@ export function Interactive3DCard({
           )}
         </div>
         {/* 3D Scene side */}
-        <div className="flex-1 relative min-h-[450px] h-[450px] md:h-auto md:min-h-full flex items-center justify-center overflow-hidden p-0">
-          <SplineScene scene={splineScene} className="!w-full !h-full !min-h-[450px] md:!min-h-full object-cover scale-110 md:scale-100" />
+        <div className="flex-1 relative min-h-[300px] md:min-h-full flex items-center justify-center overflow-hidden p-2 md:p-0">
+          <SplineScene scene={splineScene} className="w-full h-full max-h-none object-contain scale-[1.2] md:scale-100" />
           {/* Gradient overlay for seamless blend */}
           <div className={cn(
             "absolute inset-0 pointer-events-none",
