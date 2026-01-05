@@ -1,5 +1,5 @@
 import { ArrowRight, Briefcase } from 'lucide-react';
-import { LiquidGlassLink } from '@/components/ui/liquid-glass-button';
+import { ShinyLink } from '@/components/ui/shiny-button';
 
 const HeroSection = () => {
   const stats = [
@@ -38,14 +38,14 @@ const HeroSection = () => {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20 animate-in animate-delay-300">
-          <LiquidGlassLink href="#contact" size="lg" variant="primary">
+          <ShinyLink href="#contact" variant="primary">
             START YOUR PROJECT
             <ArrowRight className="w-4 h-4" />
-          </LiquidGlassLink>
-          <LiquidGlassLink href="#portfolio" size="lg" variant="secondary">
+          </ShinyLink>
+          <ShinyLink href="#portfolio" variant="secondary">
             VIEW OUR WORK
             <Briefcase className="w-4 h-4" />
-          </LiquidGlassLink>
+          </ShinyLink>
         </div>
 
         {/* Stats */}

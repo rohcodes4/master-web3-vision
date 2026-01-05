@@ -61,8 +61,8 @@ export function Interactive3DCard({
         </div>
 
         {/* 3D Scene side */}
-        <div className="flex-1 relative min-h-[250px] md:min-h-full flex items-center justify-center overflow-hidden p-4 md:p-0">
-          <SplineScene scene={splineScene} className="w-full h-full max-h-[200px] md:max-h-none object-contain scale-100 md:scale-100" />
+        <div className="flex-1 relative min-h-[300px] md:min-h-full flex items-center justify-center overflow-hidden p-2 md:p-0">
+          <SplineScene scene={splineScene} className="w-full h-full max-h-none object-contain scale-[1.2] md:scale-100" />
           {/* Gradient overlay for seamless blend */}
           <div className={cn(
             "absolute inset-0 pointer-events-none",
