@@ -41,10 +41,12 @@ const Navigation = () => {
       >
         <div className="container mx-auto px-6 md:px-10 lg:px-16 flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center group-hover:scale-110 transition-transform">
-              <span className="text-xl font-syne font-black text-background">M</span>
-            </div>
+          <a href="#" className="flex items-center gap-2 group">
+            <img 
+              src="/master-logo.png" 
+              alt="Master Logo" 
+              className="w-10 h-10 object-contain group-hover:scale-110 transition-transform"
+            />
             <span className="font-syne text-xl font-bold tracking-widest">MASTER</span>
           </a>
 
