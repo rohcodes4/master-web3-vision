@@ -1,8 +1,10 @@
 'use client'
+
 import { SplineScene } from "@/components/ui/spline-scene";
 import { Spotlight } from "@/components/ui/spotlight";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
+
 interface Interactive3DCardProps {
   title: string;
   subtitle?: string;
@@ -14,6 +16,7 @@ interface Interactive3DCardProps {
   className?: string;
   spotlightColor?: string;
 }
+
 export function Interactive3DCard({
   title,
   subtitle,
@@ -28,7 +31,7 @@ export function Interactive3DCard({
   return (
     <div className={cn("w-full", className)}>
       <Spotlight fill={spotlightColor} size={400} />
-
+      
       <div className={cn(
         "glass-card rounded-3xl min-h-[400px] md:min-h-[500px] flex flex-col md:flex-row overflow-hidden",
         reversed && "md:flex-row-reverse"
@@ -47,7 +50,7 @@ export function Interactive3DCard({
             {description}
           </p>
           {ctaText && ctaHref && (
-
+            <a
               href={ctaHref}
               className="inline-flex items-center gap-2 text-primary hover:text-secondary transition-colors group"
             >
@@ -56,6 +59,7 @@ export function Interactive3DCard({
             </a>
           )}
         </div>
+
         {/* 3D Scene side */}
         <div className="flex-1 relative min-h-[300px] md:min-h-full flex items-center justify-center overflow-hidden p-2 md:p-0">
           <SplineScene scene={splineScene} className="w-full h-full max-h-none object-contain scale-[1.2] md:scale-100" />
