@@ -1,5 +1,5 @@
 import { ArrowRight, Briefcase } from 'lucide-react';
-import { HoverButton } from '@/components/ui/hover-button';
+import { GradientButton } from '@/components/ui/gradient-button';
 
 const HeroSection = () => {
   const stats = [
@@ -38,14 +38,14 @@ const HeroSection = () => {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20 animate-in animate-delay-300">
-          <HoverButton href="#contact">
+          <GradientButton href="#contact">
             START YOUR PROJECT
             <ArrowRight className="w-4 h-4" />
-          </HoverButton>
-          <HoverButton href="#portfolio">
+          </GradientButton>
+          <GradientButton href="#portfolio" variant="variant">
             VIEW OUR WORK
             <Briefcase className="w-4 h-4" />
-          </HoverButton>
+          </GradientButton>
         </div>
 
         {/* Stats */}

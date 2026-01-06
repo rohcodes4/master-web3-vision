@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Mail, Send } from 'lucide-react';
-import { HoverButton } from '@/components/ui/hover-button';
+import { GradientButton } from '@/components/ui/gradient-button';
 
 const CTASection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -40,14 +40,14 @@ const CTASection = () => {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 reveal" style={{ transitionDelay: '100ms' }}>
-            <HoverButton href="https://t.me/Cwpto" target="_blank" rel="noopener noreferrer">
+            <GradientButton href="https://t.me/Cwpto" target="_blank" rel="noopener noreferrer">
               TELEGRAM
               <Send className="w-4 h-4" />
-            </HoverButton>
-            <HoverButton href="mailto:mastercwpto@gmail.com">
+            </GradientButton>
+            <GradientButton href="mailto:mastercwpto@gmail.com" variant="variant">
               mastercwpto@gmail.com
               <Mail className="w-4 h-4" />
-            </HoverButton>
+            </GradientButton>
           </div>
         </div>
       </div>
