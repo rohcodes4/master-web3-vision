@@ -44,7 +44,7 @@ const CTASection = () => {
               TELEGRAM
               <Send className="w-4 h-4" />
             </GradientButton>
-            <GradientButton href="mailto:mastercwpto@gmail.com" variant="variant">
+            <GradientButton href="mailto:mastercwpto@gmail.com" variant="outline">
               mastercwpto@gmail.com
               <Mail className="w-4 h-4" />
             </GradientButton>
