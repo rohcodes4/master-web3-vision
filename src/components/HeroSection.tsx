@@ -42,7 +42,7 @@ const HeroSection = () => {
             START YOUR PROJECT
             <ArrowRight className="w-4 h-4" />
           </GradientButton>
-          <GradientButton href="#portfolio" variant="variant">
+          <GradientButton href="#portfolio" variant="outline">
             VIEW OUR WORK
             <Briefcase className="w-4 h-4" />
           </GradientButton>

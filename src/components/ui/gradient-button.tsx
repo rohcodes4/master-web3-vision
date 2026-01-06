@@ -7,9 +7,8 @@ import { cn } from "@/lib/utils"
 
 const gradientButtonVariants = cva(
   [
-    "gradient-button",
     "inline-flex items-center justify-center gap-2",
-    "rounded-[11px] min-w-[132px] px-6 py-3 md:px-9 md:py-4",
+    "rounded-[350px] min-w-[132px] px-6 py-3 md:px-9 md:py-4",
     "text-base leading-[19px] font-[500] text-white",
     "font-sans font-bold",
     "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
@@ -19,8 +18,8 @@ const gradientButtonVariants = cva(
   {
     variants: {
       variant: {
-        default: "",
-        variant: "gradient-button-variant",
+        default: "gradient-button gradient-button-variant",
+        outline: "bg-transparent border-2 border-white hover:bg-white/10",
       },
     },
     defaultVariants: {
