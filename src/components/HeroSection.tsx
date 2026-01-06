@@ -1,5 +1,5 @@
 import { ArrowRight, Briefcase } from 'lucide-react';
-import { ShinyLink } from '@/components/ui/shiny-button';
+import { HoverButton } from '@/components/ui/hover-button';
 
 const HeroSection = () => {
   const stats = [
@@ -16,7 +16,7 @@ const HeroSection = () => {
         <div className="inline-flex items-center gap-3 px-6 py-3 glass-card rounded-full mb-12 animate-in">
           <span className="w-2.5 h-2.5 rounded-full bg-primary animate-pulse" />
           <span className="text-sm uppercase tracking-[0.12em] text-foreground/70">
-            Accepting New Projects
+            Stake Your Vision
           </span>
         </div>
 
@@ -38,14 +38,14 @@ const HeroSection = () => {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20 animate-in animate-delay-300">
-          <ShinyLink href="#contact" variant="primary">
+          <HoverButton href="#contact">
             START YOUR PROJECT
             <ArrowRight className="w-4 h-4" />
-          </ShinyLink>
-          <ShinyLink href="#portfolio" variant="secondary">
+          </HoverButton>
+          <HoverButton href="#portfolio" className="bg-gradient-to-r from-muted to-muted/80 hover:shadow-muted/25 border-muted/20">
             VIEW OUR WORK
             <Briefcase className="w-4 h-4" />
-          </ShinyLink>
+          </HoverButton>
         </div>
 
         {/* Stats */}
