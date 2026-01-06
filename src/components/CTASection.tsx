@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Mail, Send } from 'lucide-react';
-import { ShinyLink } from '@/components/ui/shiny-button';
+import { HoverButton } from '@/components/ui/hover-button';
 
 const CTASection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -40,14 +40,14 @@ const CTASection = () => {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 reveal" style={{ transitionDelay: '100ms' }}>
-            <ShinyLink href="https://t.me/Cwpto" variant="primary" target="_blank" rel="noopener noreferrer">
+            <HoverButton href="https://t.me/Cwpto" target="_blank" rel="noopener noreferrer">
               TELEGRAM
               <Send className="w-4 h-4" />
-            </ShinyLink>
-            <ShinyLink href="mailto:mastercwpto@gmail.com" variant="secondary">
+            </HoverButton>
+            <HoverButton href="mailto:mastercwpto@gmail.com" className="bg-gradient-to-r from-muted to-muted/80 hover:shadow-muted/25 border-muted/20">
               mastercwpto@gmail.com
               <Mail className="w-4 h-4" />
-            </ShinyLink>
+            </HoverButton>
           </div>
         </div>
       </div>
