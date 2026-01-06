@@ -42,7 +42,7 @@ const HeroSection = () => {
             START YOUR PROJECT
             <ArrowRight className="w-4 h-4" />
           </HoverButton>
-          <HoverButton href="#portfolio" className="bg-gradient-to-r from-muted to-muted/80 hover:shadow-muted/25 border-muted/20">
+          <HoverButton href="#portfolio">
             VIEW OUR WORK
             <Briefcase className="w-4 h-4" />
           </HoverButton>
