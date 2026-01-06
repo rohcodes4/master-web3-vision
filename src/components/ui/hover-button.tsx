@@ -90,6 +90,9 @@ const HoverButton = React.forwardRef<HTMLButtonElement, HoverButtonProps>(
 
     const buttonContent = (
       <>
+        {/* Neon top border */}
+        <span className="absolute h-px opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out inset-x-0 top-0 bg-gradient-to-r w-3/4 mx-auto from-transparent via-primary to-transparent" />
+        
         {circles.map(({ id, x, y, color, fadeState }) => (
           <div
             key={id}
@@ -107,13 +110,16 @@ const HoverButton = React.forwardRef<HTMLButtonElement, HoverButtonProps>(
           />
         ))}
         <span className="relative z-10 flex items-center gap-2">{children}</span>
+        
+        {/* Neon bottom border */}
+        <span className="absolute group-hover:opacity-50 opacity-30 transition-all duration-500 ease-in-out inset-x-0 h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-primary to-transparent" />
       </>
     )
 
     const commonClasses = cn(
-      "hover-button relative overflow-hidden rounded-full px-6 py-3 md:px-8 md:py-4 font-semibold text-white transition-all duration-300",
-      "bg-gradient-to-r from-primary to-primary/80 hover:shadow-lg hover:shadow-primary/25",
-      "border border-primary/20",
+      "group hover-button relative overflow-hidden rounded-full px-6 py-3 md:px-8 md:py-4 font-semibold text-white transition-all duration-300",
+      "bg-muted/10 hover:bg-muted/20 hover:shadow-lg hover:shadow-primary/10",
+      "border border-muted/30",
       className
     )
 

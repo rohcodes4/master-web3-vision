@@ -44,7 +44,7 @@ const CTASection = () => {
               TELEGRAM
               <Send className="w-4 h-4" />
             </HoverButton>
-            <HoverButton href="mailto:mastercwpto@gmail.com" className="bg-gradient-to-r from-muted to-muted/80 hover:shadow-muted/25 border-muted/20">
+            <HoverButton href="mailto:mastercwpto@gmail.com">
               mastercwpto@gmail.com
               <Mail className="w-4 h-4" />
             </HoverButton>
