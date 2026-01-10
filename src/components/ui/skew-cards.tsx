@@ -14,27 +14,27 @@ interface TestimonialCard {
 const testimonials: TestimonialCard[] = [
   {
     name: 'Sarah Chen',
-    role: 'Creative Director',
-    company: 'Pixar Animation',
-    testimonial: 'Their animation work is absolutely breathtaking. The attention to detail and creative vision transformed our project beyond expectations. A true game-changer for our brand.',
+    role: 'Client',
+    company: '',
+    testimonial: 'Master totally revamped our site. Fixed our slow crypto trading site. Loads crazy fast now, sales up big time. Legends!',
     gradientFrom: '#A855F7',
     gradientTo: '#EC4899',
     icon: <Sparkles className="w-5 h-5" />,
   },
   {
     name: 'Marcus Webb',
-    role: 'CEO',
-    company: 'ArtStation',
-    testimonial: 'Exceptional artistry and professionalism. They delivered stunning 3D visuals that captivated our audience and drove engagement through the roof. Highly recommend!',
+    role: 'Client',
+    company: '',
+    testimonial: 'Master nailed our app. Whipped up a secure dashboard super quick. Team is super quick, saved us months. 10/10!',
     gradientFrom: '#06B6D4',
     gradientTo: '#8B5CF6',
     icon: <Palette className="w-5 h-5" />,
   },
   {
     name: 'Elena Rodriguez',
-    role: 'Head of Production',
-    company: 'Netflix Animation',
-    testimonial: 'Working with this team was a dream. Their motion design expertise and artistic sensibility brought our characters to life in ways we never imagined possible.',
+    role: 'Client',
+    company: '',
+    testimonial: 'Master built our SaaS dream—users love it! Electron app with AI smarts. Growth exploded after launch. These guys get it!',
     gradientFrom: '#10B981',
     gradientTo: '#3B82F6',
     icon: <Film className="w-5 h-5" />,
@@ -125,19 +125,23 @@ export default function SkewCards() {
                 {/* Author */}
                 <div className="mt-4 pt-4 border-t border-white/10">
                   <p className="text-white font-semibold">{item.name}</p>
-                  <p className="text-white/50 text-sm">
-                    {item.role} at{' '}
-                    <span
-                      className="font-medium"
-                      style={{
-                        background: `linear-gradient(90deg, ${item.gradientFrom}, ${item.gradientTo})`,
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                      }}
-                    >
-                      {item.company}
-                    </span>
-                  </p>
+                  {item.company ? (
+                    <p className="text-white/50 text-sm">
+                      {item.role} at{' '}
+                      <span
+                        className="font-medium"
+                        style={{
+                          background: `linear-gradient(90deg, ${item.gradientFrom}, ${item.gradientTo})`,
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                        }}
+                      >
+                        {item.company}
+                      </span>
+                    </p>
+                  ) : (
+                    <p className="text-white/50 text-sm">{item.role}</p>
+                  )}
                 </div>
 
                 {/* Star Rating */}
