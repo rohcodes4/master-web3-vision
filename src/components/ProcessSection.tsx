@@ -72,11 +72,17 @@ const ProcessSection = () => {
               >
                 {/* Number Circle with solid background */}
                 <div className="relative inline-flex items-center justify-center w-[100px] h-[100px] mb-10">
+                  {/* Outer glow shadow */}
+                  <div className="absolute inset-[-20px] rounded-full bg-primary/20 blur-xl" />
+                  {/* Third ring (outermost) */}
+                  <div className="absolute inset-[-16px] border border-primary/10 rounded-full" />
+                  {/* Second ring */}
+                  <div className="absolute inset-[-8px] border border-primary/20 rounded-full" />
                   {/* Solid background circle */}
                   <div className="absolute inset-0 bg-background rounded-full" />
-                  {/* Border */}
+                  {/* Main border */}
                   <div className="absolute inset-0 border-2 border-primary/30 rounded-full" />
-                  {/* Glow effect */}
+                  {/* Inner glow effect */}
                   <div className="absolute inset-2 border border-primary/20 rounded-full animate-pulse-glow" />
                   {/* Number */}
                   <span className="relative font-syne text-3xl md:text-4xl font-bold text-primary">
