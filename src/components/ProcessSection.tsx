@@ -61,13 +61,7 @@ const ProcessSection = () => {
           </p>
         </div>
 
-        {/* Process Steps */}
         <div className="relative">
-          {/* Connecting Line (Desktop) - Behind the circles */}
-          <div className="hidden lg:block absolute top-[50px] left-[12%] right-[12%] h-0.5">
-            <div className="absolute inset-0 bg-surface" />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-accent opacity-50" />
-          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
             {steps.map((step, index) => (
