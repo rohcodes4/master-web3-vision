@@ -48,12 +48,12 @@ const LoadingScreen = () => {
       </h1>
 
       {/* Progress Bar */}
-      <div className="w-48 h-px bg-muted overflow-hidden">
+      {/* <div className="w-48 h-px bg-muted overflow-hidden">
         <div
           className="h-full bg-primary transition-all duration-100"
           style={{ width: `${progress}%` }}
         />
-      </div>
+      </div> */}
     </div>
   );
 };
