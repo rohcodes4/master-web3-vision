@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { FileCode2, Landmark, Image, Layout, ShieldCheck, Compass } from 'lucide-react';
+import { FileCode2, Landmark, Image, Layout, ShieldCheck, Compass, MonitorSmartphone, Globe, Bot } from 'lucide-react';
 import { AnimatedWaveBackground } from './ui/animated-wave-background';
 import { Web3ServiceCard } from './ui/web3-service-card';
 
@@ -25,6 +25,21 @@ const ServicesSection = () => {
   }, []);
 
   const services = [
+    {
+      icon: MonitorSmartphone,
+      title: 'Web Design & Development',
+      features: ['Custom Website Design', 'Responsive & Mobile-First', 'CMS Integration', 'Performance Optimization'],
+    },
+    {
+      icon: Globe,
+      title: 'E-Commerce & Web Apps',
+      features: ['Full-Stack Web Applications', 'E-Commerce Solutions', 'API Development', 'SEO & Analytics'],
+    },
+    {
+      icon: Bot,
+      title: 'AI Automation',
+      features: ['Workflow Automation', 'AI Chatbot Integration', 'Data Processing Pipelines', 'LLM-Powered Tools'],
+    },
     {
       icon: FileCode2,
       title: 'Smart Contract Development',
@@ -76,7 +91,7 @@ const ServicesSection = () => {
             WHAT WE DO
           </span>
           <h2 className="font-syne text-[clamp(2rem,5vw,3.5rem)] font-bold mb-6">
-            End-to-End Web3<br />Development Services
+            End-to-End<br />Development Services
           </h2>
         </div>
 
