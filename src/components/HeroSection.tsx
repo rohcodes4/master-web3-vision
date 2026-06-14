@@ -13,12 +13,12 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 md:px-10 lg:px-16 pt-32 pb-16">
       <div className="text-center max-w-5xl mx-auto">
         {/* Badge */}
-        <div className="inline-flex items-center gap-3 px-6 py-3 glass-card rounded-full mb-12 animate-in">
+        {/* <div className="inline-flex items-center gap-3 px-6 py-3 glass-card rounded-full mb-12 animate-in">
           <span className="w-2.5 h-2.5 rounded-full bg-primary animate-pulse" />
           <span className="text-sm uppercase tracking-[0.12em] text-foreground/70">
             Stake Your Vision
           </span>
-        </div>
+        </div> */}
 
         {/* Headline */}
         <h1 className="font-syne font-extrabold leading-[0.92] mb-12">
@@ -31,9 +31,9 @@ const HeroSection = () => {
           >
             FUTURE
           </span>
-          <span className="block text-[clamp(2.5rem,10vw,7rem)] animate-in animate-delay-200">
+          {/* <span className="block text-[clamp(2.5rem,10vw,7rem)] animate-in animate-delay-200">
             OF WEB3
-          </span>
+          </span> */}
         </h1>
 
         {/* Buttons */}

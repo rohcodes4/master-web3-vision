@@ -47,11 +47,6 @@ const LoadingScreen = () => {
         MASTER
       </h1>
 
-      {/* Loading Text */}
-      <p className="text-primary text-xs uppercase tracking-[0.3em] mb-4 animate-pulse">
-        Initializing
-      </p>
-
       {/* Progress Bar */}
       <div className="w-48 h-px bg-muted overflow-hidden">
         <div

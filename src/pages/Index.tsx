@@ -27,8 +27,8 @@ const Index = () => {
           <HeroSection />
           <Spline3DSection position="above" />
           <Spline3DSection position="below" />
-          <ServicesSection />
           <PortfolioSection />
+          <ServicesSection />
           <ArtAnimationSection />
           <ProcessSection />
           <TestimonialsSection />
